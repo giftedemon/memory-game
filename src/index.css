@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --title-size: 5rem;
+
+    --title-font: "Mountains of Christmas", serif;
+    --name-font: "Roboto", serif;
+
+    --bg-color: #f0edcc;
+    --card-color: #02343f;
+    --card-font-color: #f0edcc;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+main {
+    min-height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: var(--title-size);
+    font-family: var(--title-font);
+    font-weight: 700;
+}
+
+@media (max-width: 1410px) {
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 1032px) {
+    main {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 469px) {
+    h1 {
+        line-height: 1;
+    }
+    main {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+}
