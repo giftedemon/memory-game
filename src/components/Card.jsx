@@ -1,8 +1,15 @@
 import "../styles/card.css";
 
-function Card({ name, src, id, clickHandle }) {
+function Card({ name, src, id, clickHandle, shuffleCards }) {
     return (
-        <div className="card" onClick={clickHandle} id={id}>
+        <div
+            className="card"
+            onClick={(e) => {
+                clickHandle(e);
+                shuffleCards();
+            }}
+            id={id}
+        >
             <div className="card-img">
                 <img src={src} alt="" />
             </div>
