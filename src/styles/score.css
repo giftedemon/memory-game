@@ -10,3 +10,27 @@
 
     font-size: var(--score-size);
 }
+
+@media (max-width: 1192px) {
+    :root {
+        --score-size: 2rem;
+    }
+}
+
+@media (max-width: 1032px) {
+    :root {
+        --score-size: 1.8rem;
+    }
+}
+
+@media (max-width: 469px) {
+    :root {
+        --score-size: 1.3rem;
+    }
+}
+
+@media (max-width: 340px) {
+    :root {
+        --score-size: 1.2rem;
+    }
+}

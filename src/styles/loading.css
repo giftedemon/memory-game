@@ -8,3 +8,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 1032px) {
+    .loading {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 469px) {
+    .loading {
+        font-size: 3rem;
+    }
+}

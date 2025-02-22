@@ -4,7 +4,10 @@ import Score from "./components/Score";
 import GameOver from "./components/GameOver";
 
 function App() {
-    const [scores, setScores] = useState({ currentScore: 0, bestScore: 0 });
+    const [scores, setScores] = useState({
+        currentScore: 0,
+        bestScore: 0,
+    });
     const [prevClicked, setPrevClicked] = useState({});
     const [gameOver, setGameOver] = useState(false);
 
@@ -15,7 +18,9 @@ function App() {
             const curScore = scores.currentScore + 1;
             let bestScore = scores.bestScore;
 
-            if (isBestScore(curScore, bestScore)) bestScore += 1;
+            if (isBestScore(curScore, bestScore)) {
+                bestScore = curScore;
+            }
 
             setScores({ currentScore: curScore, bestScore: bestScore });
         } else {

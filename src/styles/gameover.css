@@ -14,7 +14,7 @@
 .game-over {
     position: fixed;
     left: 50%;
-    top: 45%;
+    top: 50%;
 
     transform: translate(-50%, -50%);
     background-color: var(--bg-color);
@@ -24,14 +24,16 @@
 
     display: grid;
     gap: 4rem;
+
+    min-width: 250px;
 }
 
 .game-over h2 {
-    font-size: 7rem;
+    font-size: 6rem;
 }
 
 .game-over p {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .game-over button {
@@ -42,4 +44,57 @@
 
     width: fit-content;
     justify-self: center;
+}
+
+@media (max-width: 1192px) {
+    .game-over {
+        padding: 2.5rem;
+    }
+
+    .game-over h2 {
+        font-size: 5rem;
+    }
+
+    .game-over p {
+        font-size: 2rem;
+    }
+
+    .game-over button {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1032px) {
+    .game-over {
+        padding: 2rem;
+        gap: 2.5rem;
+    }
+
+    .game-over h2 {
+        font-size: 4rem;
+    }
+
+    .game-over button {
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 469px) {
+    .game-over {
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .game-over h2 {
+        font-size: 3rem;
+    }
+
+    .game-over p {
+        font-size: 1.5rem;
+    }
+
+    .game-over button {
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+    }
 }
