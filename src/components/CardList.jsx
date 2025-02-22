@@ -1,21 +1,26 @@
 import Card from "./Card";
 import { useState, useEffect } from "react";
 import "../styles/cardlist.css";
+import Loading from "./Loading";
 
 function CardList() {
     const [animes, setAnimes] = useState([]);
-    console.log(animes);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        async function loadImgs() {
+        async function getData() {
             const response = await fetch("https://api.jikan.moe/v4/people/1870/full");
             const data = await response.json();
+
             setAnimes(data.data.anime.slice(0, 12));
+            setLoading(false);
         }
-        loadImgs();
+        getData();
     }, []);
 
-    return (
+    return loading ? (
+        <Loading></Loading>
+    ) : (
         <div className="card-list">
             {animes.map((el) => {
                 return (

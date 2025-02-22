@@ -6,7 +6,9 @@ function Card({ name, src, id }) {
             <div className="card-img">
                 <img src={src} alt="" />
             </div>
-            <h2 className="card-name">{name}</h2>
+            <div className="card-title">
+                <h2 className="card-name">{name}</h2>
+            </div>
         </div>
     );
 }
