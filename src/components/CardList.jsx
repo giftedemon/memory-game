@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "../styles/cardlist.css";
 import Loading from "./Loading";
 
-function CardList() {
+function CardList({ clickHandle }) {
     const [animes, setAnimes] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -29,6 +29,7 @@ function CardList() {
                         name={el.anime.title}
                         src={el.anime.images.jpg.large_image_url}
                         id={el.anime.mal_id}
+                        clickHandle={clickHandle}
                     ></Card>
                 );
             })}

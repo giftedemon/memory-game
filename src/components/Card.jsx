@@ -1,8 +1,8 @@
 import "../styles/card.css";
 
-function Card({ name, src, id }) {
+function Card({ name, src, id, clickHandle }) {
     return (
-        <div className="card">
+        <div className="card" onClick={clickHandle} id={id}>
             <div className="card-img">
                 <img src={src} alt="" />
             </div>

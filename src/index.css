@@ -33,6 +33,11 @@ h1 {
     font-weight: 700;
 }
 
+.memory-info {
+    display: grid;
+    gap: 1rem;
+}
+
 @media (max-width: 1410px) {
     main {
         padding: 1rem;

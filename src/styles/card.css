@@ -26,6 +26,10 @@
     box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.35);
 }
 
+.card > * {
+    pointer-events: none;
+}
+
 .card:hover {
     transform: scale(1.05);
 }
