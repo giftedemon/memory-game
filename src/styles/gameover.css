@@ -1,0 +1,45 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.game-over {
+    position: fixed;
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+    background-color: var(--bg-color);
+
+    padding: 3rem;
+    border-radius: 10px;
+
+    display: grid;
+    gap: 4rem;
+}
+
+.game-over h2 {
+    font-size: 7rem;
+}
+
+.game-over p {
+    font-size: 3rem;
+}
+
+.game-over button {
+    padding: 1rem 3rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 2.5rem;
+
+    width: fit-content;
+    justify-self: center;
+}

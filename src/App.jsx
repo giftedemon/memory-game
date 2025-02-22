@@ -1,6 +1,7 @@
 import { useState, useEffect, use } from "react";
 import CardList from "./components/CardList";
 import Score from "./components/Score";
+import GameOver from "./components/GameOver";
 
 function App() {
     const [scores, setScores] = useState({ currentScore: 0, bestScore: 0 });
@@ -13,12 +14,19 @@ function App() {
 
             const curScore = scores.currentScore + 1;
             let bestScore = scores.bestScore;
+
             if (isBestScore(curScore, bestScore)) bestScore += 1;
 
             setScores({ currentScore: curScore, bestScore: bestScore });
         } else {
             setGameOver(true);
         }
+    }
+
+    function startNewGame() {
+        setScores((prev) => ({ ...prev, currentScore: 0 }));
+        setPrevClicked({});
+        setGameOver(false);
     }
 
     function isBestScore(current, best) {
@@ -32,6 +40,11 @@ function App() {
                 <Score currentScore={scores.currentScore} bestScore={scores.bestScore}></Score>
             </div>
             <CardList clickHandle={scoreHandler}></CardList>
+            <GameOver
+                gameOver={gameOver}
+                clickHandle={startNewGame}
+                currentScore={scores.currentScore}
+            ></GameOver>
         </main>
     );
 }
